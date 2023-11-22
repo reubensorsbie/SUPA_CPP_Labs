@@ -13,7 +13,7 @@ std::vector<std::vector<float>> read_data(std::string filename);
 void print_data(std::vector<std::vector<float>> data);
 
 // function to output the magnitude of the inputted 2D vector
-float get_magnitude(std::vector<float> coords);
+double get_magnitude(std::vector<float> coords);
 
 // function to print and store all the magnitudes of the 2D vectors in the input
 // vector

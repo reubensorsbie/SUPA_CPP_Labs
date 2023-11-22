@@ -91,7 +91,7 @@ void print_data(std::vector<std::vector<float>> data){
     }
 }
 
-float get_magnitude(std::vector<float> coords){
+double get_magnitude(std::vector<float> coords){
     double x,y;
     x = coords[0];
     y = coords[1];
