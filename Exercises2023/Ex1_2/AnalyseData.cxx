@@ -29,8 +29,11 @@ int main(){
         get_all_data_magnitudes(data);
     }
 
-    // least squares fit
-    std::vector<double> lin_params = least_squares_linear_fit(data);
+    // define error file name
+    std::string error_file = "error2D_float.txt";
+    // get error data
+    std::vector<std::vector<double>> err_data = read_data(error_file);
+    least_squares_linear_fit(data, err_data);
     
     return 0;
 }

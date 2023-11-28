@@ -8,6 +8,7 @@
 void print_result(std::string result);
 void print_result(double result);
 void print_result(std::vector<double> result);
+void print_result(std::vector<std::vector<double>> result);
 
 // function to read coordinate data CSV file and output data as a vector of vectors
 // containing corresponding pairs of x and y values
@@ -24,6 +25,13 @@ double get_magnitude(std::vector<double> coords);
 // vector
 std::vector<double> get_all_data_magnitudes(std::vector<std::vector<double>> data);
 
-// function to produce a linear fit of the x,y data using the least squares method
-std::vector<double> least_squares_linear_fit(std::vector<std::vector<double>> data);
+double get_chi_sqrd(std::vector<std::vector<double>> data, std::vector<std::vector<double>> err_data, double p, double q);
 
+double fit_function(double x, double p, double q);
+
+// function to produce a linear fit of the x,y data using the least squares method
+void least_squares_linear_fit(std::vector<std::vector<double>> data, std::vector<std::vector<double>> err_data);
+
+double recursive_multiplier(double x, int y, double& result);
+
+double exponentiate_all_coords(std::vector<std::vector<double>> data);
