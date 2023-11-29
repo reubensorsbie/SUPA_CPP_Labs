@@ -290,15 +290,21 @@ double recursive_multiplier(double x, int y, double& result){
 }
 
 
-double exponentiate_all_coords(std::vector<std::vector<double>> data){
+void exponentiate_all_coords(std::vector<std::vector<double>> data){
     
+    // prepare data store
     std::vector<double> exponentiation_outputs;
     
+    // calculate result for each coordinate
     for (int i=0; i < data.size(); ++i){
 
+        // intialise result
         double result = 1;
+        // round y and convert to integer
         int integer_y = static_cast<int>(std::round(data[i][1]));
+        // exponentiate
         double bin_variable = recursive_multiplier(data[i][0], integer_y, result);
+        // extract ad store result
         exponentiation_outputs.push_back(result);
     }
 
