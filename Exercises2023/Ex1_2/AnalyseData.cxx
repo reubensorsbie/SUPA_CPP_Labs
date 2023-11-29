@@ -15,13 +15,14 @@ int main(){
     std::string error_filename = "error2D_float.txt";
     std::vector<std::vector<double>> err_data = read_data(error_filename);
     
-    // ask user whether to print or read magnitudes
     int user_input1;
     bool user_interacting = true;
-    std::cout << "Would you like to print (1), find the magnitudes (2), perform linear fit(3) or exponentiate coordinates(4)?\nType (0) to exit\n";
-    std::cin >> user_input1;
 
     while(user_interacting) {
+        
+        // ask user whether to print or read magnitudes
+        std::cout << "Would you like to print (1), find the magnitudes (2), perform linear fit(3) or exponentiate coordinates(4)?\nType (0) to exit\n";
+        std::cin >> user_input1;
 
         switch (user_input1)
         {
@@ -47,6 +48,10 @@ int main(){
         
         default:
             std::cout << "Invalid Input" << std::endl;
+            
+            // std::cin.clear();
+            // std::cout << "Would you like to print (1), find the magnitudes (2), perform linear fit(3) or exponentiate coordinates(4)?\nType (0) to exit\n";
+            // std::cin >> user_input1;
             break;
         }
     }

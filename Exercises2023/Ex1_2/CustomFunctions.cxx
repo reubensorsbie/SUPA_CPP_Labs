@@ -306,6 +306,10 @@ void exponentiate_all_coords(std::vector<std::vector<double>> data){
         double bin_variable = recursive_multiplier(data[i][0], integer_y, result);
         // extract ad store result
         exponentiation_outputs.push_back(result);
+
+        // print to terminal
+        print_result("Exponentiated Coordinates:\n");
+        print_result(exponentiation_outputs);
     }
 
     // save output to .txt file
